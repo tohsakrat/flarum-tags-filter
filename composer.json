@@ -28,8 +28,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^1.2.0",
-        "fof/drafts": "*"
+        "flarum/core": "^1.2.0"
     },
     "extra": {
         "flarum-extension": {
