@@ -37,7 +37,7 @@
             "category": "feature",
             "icon": {
                 "name": "fas fa-tags",
-                "backgroundColor": "linear-gradient(142deg, #007cff 0%, #b721ff 100%) !important",
+                "backgroundColor": "purple",
                 "color": "#fff"
             }
         },
