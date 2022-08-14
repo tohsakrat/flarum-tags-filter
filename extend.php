@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of blomstra/user-filter.
+ * This file is part of tohsakarat/tags-filter.
  *
  * Copyright (c) 2022 Blomstra Ltd
  *
@@ -18,9 +18,6 @@ return [
 
 
     new Extend\Locales(__DIR__.'/locale'),
-
-    (new Extend\Middleware('forum'))
-        ->add(Middleware\AddUserFilter::class)
 
 
 
