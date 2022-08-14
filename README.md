@@ -1,11 +1,6 @@
 # Tags Filter
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) 
-[![Latest Stable Version](https://img.shields.io/packagist/v/blomstra/user-filter.svg)](https://packagist.org/packages/blomstra/user-filter) [![Total Downloads](https://img.shields.io/packagist/dt/blomstra/user-filter.svg)](https://packagist.org/packages/blomstra/user-filter)
-
-![](https://extiverse.com/extension/blomstra/user-filter/open-graph-image)
-
-A [Flarum](http://flarum.org) extension. Filter discussion lists by discussion author.
+A [Flarum](http://flarum.org) extension. Filter discussion lists by discussion Tags.
 
 ## Installation
 
