@@ -1,6 +1,9 @@
 # Tags Filter
 
 A [Flarum](http://flarum.org) extension. Filter discussion lists by discussion Tags.
+ 
+![Image description](/assets/files/2022-08-14/1660436657-595773-image.png) 
+
 
 ## Installation
 
