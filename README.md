@@ -22,6 +22,5 @@ php flarum cache:clear
 
 ## Links
 
-- [Packagist](https://packagist.org/packages/blomstra/user-filter)
-- [GitHub](https://github.com/blomstra/flarum-ext-user-filter)
-- [Discuss](https://discuss.flarum.org/d/30153)
+- [Packagist](https://packagist.org/packages/tohsakarat/tags-filter)
+- [GitHub](https://github.com/tohsakrat/flarum-tags-filter/)
