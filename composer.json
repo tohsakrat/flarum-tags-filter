@@ -1,0 +1,47 @@
+{
+    "name": "tohsakarat/tags-filter",
+    "description": "Add a tags filter dropdown on the index page.",
+    "keywords": [
+        "upload",
+        "flarum",
+        "file"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tohsakarat",
+            "email": "bestlux@qq.com",
+            "homepage": "https://tohsakarat.work/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/tohsakrat",
+        "source": "https://github.com/tohsakrat",
+        "forum": "https://discuss.flarum.org/d/31408-tags-filter-for-flarum"
+    },
+    "homepage": "https://github.com/tohsakrat/",
+    "funding": [
+        {
+            "type": "qrCode_Alipay",
+            "url": "https://gzszd.club/assets/files/2022-05-30/1653871757-105304-img-20220530-084751.jpg"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "tohsakarat/tags-filter",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-tags",
+                "backgroundColor": "purple",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://github.com/tohsakrat"
+        }
+    }
+}
