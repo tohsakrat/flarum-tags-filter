@@ -217,6 +217,9 @@ export default class TagsFilter extends Component < IAttrs, IState > {
 		
 		
 		this.refreshTagView()
+		if(!app.searchBar.hasFocus && m.route.param().q)app.searchBar.searchState.value=
+		m.route.param()?.q?.split(' ').filter((e)=>e.indexOf(':')==-1).join(' ')+' '+m.route.param()?.q?.split(' ').filter((e)=>e.indexOf(':')!=-1).join(' ');
+		
 		
 		function renderTag( data ){
 			return data?.map((e) => {
@@ -350,7 +353,7 @@ export default class TagsFilter extends Component < IAttrs, IState > {
 		label={this.label}
         accessibleToggleLabel={app.translator.trans('tohsakarat-tags-filter.forum.index_page.filter_tags.accessible_label')}
         onshow={() => {
-          $('input').focus();
+          $('.item-tagsFilter input').focus();
         }}
       >
 	  <span class='TagsLabel '>
@@ -473,7 +476,7 @@ export default class TagsFilter extends Component < IAttrs, IState > {
 			//console.log(this.tagList)
 			const params = app.search.params();
 			this.state.selectedTags= params.q ? 
-			params.q.split(' ')
+			params.q?.split(' ')
 			.filter((d) => {return d.indexOf('tag:') != -1})
 			.map((d) => {return d.replaceAll('tag:', '')}) : [];
             
@@ -514,7 +517,7 @@ export default class TagsFilter extends Component < IAttrs, IState > {
 		if (!tag) {
 			params.q = params.q;
 		} else {
-			params.q = params.q ? params.q.split(' ') : [];
+			params.q = params.q ? params.q?.split(' ') : [];
 			params.q = params.q.indexOf('tag:' + tag) == -1 ? params.q.join(' ') + ' tag:' + tag : params.q.join(' ');
 			if(params.q[0]==' ')params.q=params.q.substr(1)
 			if(params.q[params.q.length-1]==' ')params.q=params.q.substr(0,params.q.length-2)
@@ -540,7 +543,7 @@ export default class TagsFilter extends Component < IAttrs, IState > {
 		if (!tagSlug) {
 			params.q = params.q;
 		} else {
-			params.q = params.q.split(' ').filter((e)=>{return (e!=('tag:'+tagSlug))&&(e!='')}).join(' ')
+			params.q = params.q?.split(' ').filter((e)=>{return (e!=('tag:'+tagSlug))&&(e!='')}).join(' ')
 			if(params.q[0]==' ')params.q=params.q.substr(1)
 			if(params.q[params.q.length-1]==' ')params.q=params.q.substr(0,params.q.length-1)
 		}
@@ -550,9 +553,16 @@ export default class TagsFilter extends Component < IAttrs, IState > {
 				...m.route.param(),
 				...params
 			}));
+			
+
+		
+		
 		}
 		this.UpdateSelectedTags()
-
+		if(!params.q){
+	    app.search.clear();
+		
+		}
 		m.redraw();
 
 
@@ -647,7 +657,7 @@ get label() {
       return app.translator.trans('tohsakarat-tags-filter.forum.index_page.filter_tags.label', { text: <b>{text}</b> });
     }
 
-    if (app.search.params().q) {
+    if (app.search?.params()?.q && app.search?.params()?.q?.indexOf('tag:')!=-1) {
 	 var str=this.UpdateSelectedTags()
       if (!str) {
         this.handleTagsChange(null);

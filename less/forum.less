@@ -76,9 +76,13 @@ li.item-id {
     margin-bottom: 1em;
     /* margin-top: -5em; */
     position: absolute;
-    bottom: 0.25em;
+    bottom: 1em;
     left: 50%;
     transform: translate(-50%, 0px);
+    z-index: ~"calr(var(--zindex-header) - 1)";
+    cursor: copy;
+
+
 }
 .Disc
 button.TohsakaratTagsFilter-item.Button.free-tag {
