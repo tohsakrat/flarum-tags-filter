@@ -1,0 +1,19 @@
+tohsakarat-tags-filter:
+  admin:
+    settings:
+      intro: 沒有 <code>搜尋使用者</code> 權限的使用者將看不到搜尋框。將其設定為 <code>所有人</code> 可讓所有使用者看到，或者依據您的喜好設定。
+      min_length: 開始搜尋所需的最少字元數
+      result_count: 下拉自動完成的最大結果數量
+
+  forum:
+    index_page:
+      filter_tags:
+        accessible_label: 標籤
+        all: 標籤
+        label: "{text}"
+        search_label: 搜尋...
+        no_results: 無結果
+        start_typing: 開始輸入...
+        keep_typing: 輸入中...
+        remove_filter: 停止篩選
+        link-button: 直接前往ID =
